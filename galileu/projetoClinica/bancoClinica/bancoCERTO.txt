@@ -1,0 +1,76 @@
+-- Criação da tabela usuarios
+create table usuarios (
+    idUsuario integer auto_increment,
+    nome varchar(100),
+    cpf varchar(14),
+    endereco varchar(100),
+    email varchar(100),
+    telefone varchar(14),
+    categoria integer,
+    senha varchar(8),
+    primary key(idUsuario)
+);
+
+-- Criação da tabela biomedicos
+create table biomedicos (
+    idBiomedico integer auto_increment,
+    crbm integer,
+    idUsuario integer,
+    primary key (idBiomedico),
+    foreign key (idUsuario) references usuarios(idUsuario)
+);
+
+-- Criação da tabela medicos
+create table medicos (
+    idMedico integer auto_increment,
+    crm integer,
+    idUsuario integer,
+    primary key (idMedico),
+    foreign key (idUsuario) references usuarios(idUsuario)
+);
+
+-- Criação da tabela pacientes
+create table pacientes (
+    idPaciente integer auto_increment,
+    doencasExistentes text,
+    idUsuario integer,
+    primary key (idPaciente),
+    foreign key (idUsuario) references usuarios(idUsuario)
+);
+
+-- Criação da tabela secretarios
+create table secretarios (
+    idSecretario integer auto_increment,
+    formacao text,
+    idUsuario integer,
+    primary key (idSecretario),
+    foreign key (idUsuario) references usuarios(idUsuario)
+);
+
+-- Criação da tabela agendamentos
+create table agendamentos (
+    idAgendamento integer auto_increment,
+    dataAgendamento datetime,
+    tipoExame text,
+    idPaciente integer,
+    idMedico integer,
+    idSecretario integer,
+    primary key (idAgendamento),
+    foreign key (idPaciente) references pacientes(idPaciente),
+    foreign key (idMedico) references medicos(idMedico),
+    foreign key (idSecretario) references secretarios(idSecretario)
+);
+
+-- Criação da tabela resultados
+create table resultados (
+    idResultado integer auto_increment,
+    dataResultado datetime,
+    tipoExame text,
+    idPaciente integer,
+    idMedico integer,
+    idBiomedico integer,
+    primary key(idResultado),
+    foreign key (idPaciente) references pacientes(idPaciente),
+    foreign key (idMedico) references medicos(idMedico),
+    foreign key (idBiomedico) references biomedicos(idBiomedico)
+);
