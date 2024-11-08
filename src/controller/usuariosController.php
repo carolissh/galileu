@@ -109,17 +109,23 @@ function agendamentos($data, $array_exames, $idPaciente, $idMedico, $idSecretari
     echo $sql;
     $con->Executar($sql);  // Executa o INSERT na tabela agendamentos
     $con -> Desconectar();
+    $idAgendamento = agendando();
+    return $idAgendamento;
 
-    $con2 = new ConexaoMysql();
-    $con2 -> Conectar();
+}
+function agendando(){
+
+    $con = new ConexaoMysql();
+    $con -> Conectar();
     
     // Agora, em vez de fazer um SELECT separado, você pode acessar o insert_id diretamente
-    $sql2 = 'SELECT id FROM agendamentos ORDER BY id desc LIMIT 1';  // Retorna o último ID inserido usando mysqli  // Aqui você pega o ID do último inserido
-    $idAgendamento = $con2 -> Executar($sql2);
+    $sql = 'SELECT id FROM agendamentos ORDER BY id desc LIMIT 1';  // Retorna o último ID inserido usando mysqli  // Aqui você pega o ID do último inserido
+    $idAgendamento = $con -> Executar($sql);
     echo $idAgendamento;
+    return $idAgendamento;
 
 
-    $con->Desconectar();
+ 
 
       // Retorna o ID do agendamento
 }

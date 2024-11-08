@@ -56,6 +56,11 @@ class ConexaoMysql {
         }
     }
 
+    public function prepare($sql) {
+        // Prepara a consulta SQL
+        return $this->mysqli->prepare($sql);
+    }
+
     /** Realiza INSERT, UPDATE e DELETE */
     public function Executar($sql){
         try {

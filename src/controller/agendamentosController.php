@@ -10,7 +10,7 @@ if ($_POST) {
 
     if (isset($_POST['medico'])) {
         $idMedico = $_POST['medico'];
-    } else{
+    } else if(!isset($_POST['medico'])){
         $idMedico = 0;
     }
 
@@ -33,7 +33,7 @@ if ($_POST) {
     if ($_SESSION['categoria'] == 3){
         $email = $_SESSION['login'];
         $idPaciente = selectUsersId($email);
-        $idSecretario = null;
+        $idSecretario = 0;
         $array_exames = implode(", ",  $exames);
         $idAgendamento = agendamentos($data, $array_exames, $idPaciente, $idMedico, $idSecretario); 
     }
