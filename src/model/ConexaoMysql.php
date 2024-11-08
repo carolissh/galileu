@@ -81,9 +81,7 @@ class ConexaoMysql {
             $this->mysqli->rollback();
         }
     }
-    public function GetLastInsertId() {
-        $sql = 'SELECT id FROM agendamentos ORDER BY id desc LIMIT 1';  // Retorna o último ID inserido usando mysqli
-    }
+
     
 
     /** Fecha a conexao */
