@@ -5,55 +5,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="src/css/style.css">
     <style>
-    
+        nav {
+            background-color: #1b1b1b;
+        }
+
+        .links {
+
+            width: 15%;
+        }
 
         .divUsuario {
             width: 100%;
-            height: 80vh;
-            background-color: green;
-
+            height: 70vh;
         }
 
         .alinhaUsuario {
-            background-color: pink;
+            background-color: black;
             width: 100%;
-            height: 70%;
+            height: 90%;
             display: flex;
             align-items: center;
-            display: flex;
-            align-items: center;
-           
+            background-color: #20a5d6;
+
 
         }
-        .alinhaDentro{
-            width: 50%;
-            background-color: palevioletred;
+
+        .alinhaDentro {
+            width: 60%;
+            background-color: blue;
             display: flex;
+            align-items: center;
+            justify-content: space-around;  
         }
 
         .imagem {
-            width: 500px;
+            width: 65%;
             height: 500px;
             background-color: red;
+            display: flex;
+            
+
+        }
+        .imagemTexto{
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            background-color: #1b1b1b;
+        }
+
+        h1 {
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
         }
 
         img {
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 75%;
+            max-height: 75%;
+            border: 8px solid #20a5d6;
+            border-radius: 20px;
+
 
         }
 
         .nome {
-            width: 100px;
-            height: 400px;
-            background-color: blue;
+            width: 50%;
+            height: 87%;
+            background-color:  saddlebrown ;
             display: flex;
-            justify-content: center;
+
             flex-direction: column;
+        }
+
+        a {
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 200;
+            font-style: normal;
         }
     </style>
 </head>
@@ -111,20 +149,18 @@
                 </svg>
             </div>
             <div class="links">
-                <a href="">SOBRE</a>
-                <a href="">CONTATO</a>
+
                 <a href="">EXAMES</a>
-                <a href="login.php">LOGIN</a>
+                <a href="src/controller/logoutController.php">LOGOUT</a>
             </div>
 
             <button class="mobile_btn" id="mobile_btn"><i class="bi bi-list"></i></button>
         </nav>
 
         <div id="mobile_menu">
-            <a href="sobre.php"><i class="bi bi-info-circle-fill"></i> SOBRE</a>
-            <a href=""><i class="bi bi-telephone-fill"></i> CONTATO</a>
+
             <a href="exame.php"><i class="bi bi-heart-fill"></i> EXAMES</a>
-            <a href="login.php"><i class="bi bi-person-circle"></i> LOGIN</a>
+            <a href="src/controller/logoutController.php"><i class="bi bi-person-circle"></i> LOGIN</a>
         </div>
 
     </header>
@@ -132,12 +168,21 @@
     <div class="divUsuario">
         <div class="alinhaUsuario">
             <div class="alinhaDentro">
-                <div class="imagem"><img src="src/img/imgUsuario.png" alt=""></div>
-                <div class="nome"><H1>Medico</H1><br><h1>Nome</h1></div>
-            </div>
+                <div class="imagem">
+                    <div class="imagemTexto">
+                        <img src="src/img/user.png" alt="">
+                        <H1>Medico</H1><br>
+                    </div>
+                    <div class="nome">
+                        <h1>Gui riba thomas</h1>
+                    </div>
+                </div>
+                <div class="funcoes">
+                    </div>
+                </div>
+                <a href="login.php">agendar Exame</a>
         </div>
     </div>
-
     <script src="src/js/script.js"></script>
 </body>
 

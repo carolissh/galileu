@@ -254,9 +254,9 @@
                 </svg>
             </div>
             <div class="links">
-                <a href="">SOBRE</a>
-                <a href="">CONTATO</a>
-                <a href="">EXAMES</a>
+                <a href="sobre.php">SOBRE</a>
+                <a href="pagUsusario.php">CONTATO</a>
+                <a href="exame.php">EXAMES</a>
                 <a href="login.php">LOGIN</a>
             </div>
 
