@@ -19,79 +19,162 @@
         }
 
         .links {
-
             width: 15%;
         }
 
         .divUsuario {
             width: 100%;
-            height: 70vh;
+            height: 91vh;
+            display: flex;
+            gap: 30px;
+
         }
 
         .alinhaUsuario {
-            background-color: black;
-            width: 100%;
-            height: 90%;
+            width: 50%;
+            height: 100%;
             display: flex;
-            align-items: center;
-            background-color: #20a5d6;
-
-
+            
         }
 
         .alinhaDentro {
-            width: 60%;
-            background-color: blue;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;  
+            width: 95%;
+
+
+
         }
 
         .imagem {
-            width: 65%;
-            height: 500px;
-            background-color: red;
+            width: 85%;
+            height: 300px;
             display: flex;
+            justify-content: space-around;
+            margin-top: 25px;
+            border: 2px solid black;
+            border-left: none ;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .imagemTexto {
+            
+            width: 50%;
+            height: 75%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
             
 
         }
-        .imagemTexto{
-            text-align: center;
-            width: 100%;
-            height: 100%;
-            background-color: #1b1b1b;
-        }
+
+
 
         h1 {
             font-family: "Raleway", sans-serif;
             font-optical-sizing: auto;
             font-weight: 200;
             font-style: normal;
+            color: black;
+
         }
 
         img {
-            max-width: 75%;
-            max-height: 75%;
-            border: 8px solid #20a5d6;
-            border-radius: 20px;
-
-
+            max-width: 100%;
+            max-height: 100%;
+            
+            
+          
         }
 
         .nome {
-            width: 50%;
-            height: 87%;
-            background-color:  saddlebrown ;
+            width: 500px;
+            height: 100%;
+            
             display: flex;
-
             flex-direction: column;
+            border-left: 2px solid black;
+            border-bottom-right-radius: 10px;
+            
         }
 
-        a {
+        .nome>div {
+            
+            border-bottom: 2px solid black;
+            margin-left: 8px;
+        }
+
+
+        .alinhaFuncoes {
+            width: 50%;
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .funcoes {
+
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            box-shadow: 0px 2px 20px 1px gray;
+        }
+
+        .textoFuncoes {
+            width: 100%;
+            border-bottom: 2px solid #007BFF;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .textoFuncoes h1 {
+            color: white;
             font-family: "Raleway", sans-serif;
-            font-optical-sizing: auto;
+            font-weight: 300;
+            font-size: 28px;
+            color: black;
+        }
+
+        .botoes {
+            height: 90%;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            gap: 40px;
+        }
+
+        .botoes>a {
+            font-family: "Raleway", sans-serif;
             font-weight: 200;
-            font-style: normal;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .botoes>a:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .botoes>a:active {
+            background-color: #004085;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
         }
     </style>
 </head>
@@ -170,17 +253,34 @@
             <div class="alinhaDentro">
                 <div class="imagem">
                     <div class="imagemTexto">
-                        <img src="src/img/user.png" alt="">
+                        <img src="src/img/userAzul.png" alt="">
                         <H1>Medico</H1><br>
                     </div>
                     <div class="nome">
-                        <h1>Gui riba thomas</h1>
+                        <div class="">
+                            <h1>Gui riba thomas</h1>
+                        </div>
+                        <div class="">
+                            <h1>cpf</h1>
+                        </div>
+                        <div class=""><h1>Dados</h1></div>
                     </div>
                 </div>
-                <div class="funcoes">
-                    </div>
+            </div>
+        </div>
+        <div class="alinhaFuncoes">
+            <div class="funcoes">
+                <div class="textoFuncoes">
+                    <h1>Funções</h1>
                 </div>
-                <a href="login.php">agendar Exame</a>
+                <div class="botoes">
+                    <a href="login.php">agendar Exame</a>
+                    <a href="login.php">Postra Relatorio</a>
+                    <a href="login.php">Consultar</a>
+                    <a href="login.php">Cancelar Agendamento</a>
+                    <a href="login.php">Cadastrar Paciente</a>
+                </div>
+            </div>
         </div>
     </div>
     <script src="src/js/script.js"></script>
